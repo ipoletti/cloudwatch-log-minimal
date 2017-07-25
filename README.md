@@ -8,15 +8,29 @@ Sync implementation, every push create a Http request (be careful with many log 
 
 For dev&test purpose.
 
-Dependencies:
+**Dependencies**
 * minimal-json
 * slf4j
 
-TODO's
+**TODO's**
 * Better error handling
 * Async & Logs pool (bulk invocation) 
 
-Credits
+**Example**
+
+```java
+CloudWatchLog cloudWatchLog = new CloudWatchLog();
+cloudWatchLog.setAcessKeyId("AKI**************");
+cloudWatchLog.setSecretKey("Abc22p**********************");
+cloudWatchLog.setGroupName("MyLogGroupName");
+cloudWatchLog.setStreamName("MyLogStreamName");
+cloudWatchLog.setRegion("us-east-1");
+
+cloudWatchLog.put("First line --> TEST!!");
+cloudWatchLog.put("Second an last...");
+```
+
+**Credits**
 * I used the project https://github.com/manheim/aws-request-signer with some modifications to replace Apache HttpClient with core Java HttpURLConnection.
 
 Also check https://github.com/ipoletti/log4j-cloudwatch-appender
