@@ -1,6 +1,6 @@
 # cloudwatch-log-minimal
 
-### Minimal implementation for pushing logs to "Amazon Cloudwatch Log" service. ###
+### Minimal implementation for pushing logs to "Amazon Cloudwatch Log" service in Java. ###
 
 Supports group and stream creation.
 
